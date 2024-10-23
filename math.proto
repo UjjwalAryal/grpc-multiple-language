@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package math;
+
+// The Math service definition.
+service Math {
+  // A simple RPC method to add two numbers.
+  rpc Add (AddRequest) returns (AddResponse);
+}
+
+// The request message containing two numbers.
+message AddRequest {
+  int32 num1 = 1;
+  int32 num2 = 2;
+}
+
+// The response message containing the sum.
+message AddResponse {
+  int32 sum = 1;
+}
